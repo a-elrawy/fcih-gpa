@@ -88,9 +88,9 @@
     </div>
 </div>
 <div class="grid text-center pt-3">
-    <p>Current Term GPA : {CurrGpa}</p>
-    <p>Cumulative GPA : {CummulativeGpa}</p>
-    <p>Hours : {totalCredits+prevHours}    </p>
+    <p>Current Term GPA : {CurrGpa? CurrGpa : 0}</p>
+    <p>Cumulative GPA : {CummulativeGpa? CummulativeGpa : 0}</p>
+    <p>Hours : {(totalCredits+prevHours)? totalCredits+prevHours : 0}    </p>
 </div>
 <div class="flex justify-center flex-wrap m-2 ">
     {#each subjects as subject}
@@ -102,11 +102,11 @@
                         <option value="{Object.values(object)}">{Object.keys(object)}</option>
                     {/each}
                 </select>
-                <input type="number" min="2" max="6" class="text-3xl input  font-bold text-center w-1/3 mx-auto" bind:value="{subject.credits}">
+                <input id="ds" type="number" min="2" max="6" class="text-2xl input  font-bold text-center w-1/3 mx-auto" bind:value="{subject.credits}">
                 </div>
                 <hr>
                 <p >Subject GPA: {subject.gpa} </p>
-                <p class="flex w-full " >Hours: {subject.credits} <button on:click={() => {remove(subject)}} class=" btn ml-[8.7rem] border-2 border-error bg-transparent text-error text-2xl">X</button></p>
+                <p class="flex w-full " >Hours: {subject.credits? subject.credits : 0} <button on:click={() => {remove(subject)}} class=" btn ml-[8.7rem] border-2 border-error bg-transparent text-error text-2xl">X</button></p>
                 <div class="flex justify-end"></div>
             </div>
         </div>
