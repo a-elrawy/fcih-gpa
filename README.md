@@ -1,5 +1,6 @@
 ## GPA Calculator
 This is a simple GPA calculator for FCIH students. Built with [Svelte](https://svelte.dev/).
+<br>
 The web application is deployed [Here](https://fcih-gpa.vercel.app/).
 ## Developing
 
