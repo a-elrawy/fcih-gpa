@@ -1,5 +1,6 @@
 ## GPA Calculator
 This is a simple GPA calculator for FCIH students. Built with [Svelte](https://svelte.dev/).
+The web application is deployed [Here](https://fcih-gpa.vercel.app/).
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
