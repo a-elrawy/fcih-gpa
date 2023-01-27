@@ -36,11 +36,12 @@
         'A+':4.0,
         'A':3.75,
         'B+':3.4,
-        'B':3.0,
-        'C+':2.5,
-        'C':2.0,
-        'D':1.0,
-        'F':0.0
+        'B':3.1,
+        'C+':2.8,
+        'C':2.5,
+        'D+':2.25,
+        'D':2.0,
+        'F':1.0
     }
     subjects.map(subject => {
         subject.gpa=convert[subject.grade];
@@ -54,8 +55,8 @@
         return accumulator + parseFloat(object.credits);
     }, 0);
     $: CurrGpa =   Math.round((totalGpa/totalCredits)*100)/100 ;
-    let prevGpa=3.93;
-    let prevHours=55;
+    let prevGpa=3.94;
+    let prevHours=93;
     let CummulativeGpa;
     $:  CummulativeGpa = Math.round(((prevGpa*prevHours)+CurrGpa*totalCredits)/(prevHours+totalCredits)*100)/100;
     function calculateGpa(){
